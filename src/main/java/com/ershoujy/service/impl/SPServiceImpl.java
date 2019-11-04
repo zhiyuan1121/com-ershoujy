@@ -62,7 +62,9 @@ public class SPServiceImpl implements ISPService {
     public int yemaMax(String str, int count) {
         int coun = spdao.countall(str,"上架");
         int yema=coun/count+1;
-        if(coun%count==0) yema--;
+        if(coun%count==0){
+            yema--;
+        }
         return yema;
     }
 
@@ -81,7 +83,9 @@ public class SPServiceImpl implements ISPService {
     public int yemabyuid(int uid, int count) {
         int coun = spdao.countbyuid(uid);
         int yema=coun/count+1;
-        if(coun%count==0) yema--;
+        if(coun%count==0) {
+            yema--;
+        }
         return yema;
     }
 

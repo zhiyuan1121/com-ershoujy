@@ -23,8 +23,7 @@ public class Datatime {
             }
         }catch (Exception e){
 
-        }finally {
-            return result;
         }
+        return result;
     }
 }

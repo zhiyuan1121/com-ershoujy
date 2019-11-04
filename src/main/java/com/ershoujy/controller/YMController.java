@@ -23,8 +23,9 @@ public class YMController {
     public ModelAndView login(HttpServletRequest request){
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("/login");
-        if(request.getSession().getAttribute("uid")!=null)
+        if(request.getSession().getAttribute("uid")!=null){
             modelAndView.setViewName("forward:/ym/authc/zhuye");
+        }
         return modelAndView;
     }
 

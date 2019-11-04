@@ -1,0 +1,14 @@
+server:
+  port: 8080
+  tomcat:
+    uri-encoding: utf-8
+  servlet:
+    context-path: /ershoujy
+spring:
+  mvc:
+    view:
+      suffix: .jsp
+      prefix: /WEB-INF/
+  datasource:
+    url: jdbc:mysql://134.175.72.97:3306/ershoujy?useUnicode=true&characterEncoding=utf8
+    username: root

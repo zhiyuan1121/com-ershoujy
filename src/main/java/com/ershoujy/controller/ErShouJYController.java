@@ -131,7 +131,9 @@ public class ErShouJYController {
 
     @RequestMapping("authc/wdwp")
     public ModelAndView wdesj(HttpServletRequest request,Integer yema){
-        if(yema==null) yema=1;
+        if(yema==null){
+            yema=1;
+        }
         int count=10;
         int uid=(Integer) request.getSession().getAttribute("userid");
         List<SPB> spbs = spservice.finbyuid(uid, yema, count);
@@ -167,8 +169,12 @@ public class ErShouJYController {
     public ModelAndView llsp(String gjz,Integer yema){
         ModelAndView mv = new ModelAndView();
         mv.setViewName("spall");
-        if(gjz==null) gjz="";
-        if(yema==null) yema=1;
+        if(gjz==null){
+            gjz="";
+        }
+        if(yema==null){
+            yema=1;
+        }
         int count = 10;
         int ymax=spservice.yemaMax(gjz,count);
         List<SPB> sps = spservice.finall(gjz, yema, count);
@@ -183,8 +189,12 @@ public class ErShouJYController {
     public ModelAndView llsp1(String gjz,Integer yema){
         ModelAndView mv = new ModelAndView();
         mv.setViewName("spall");
-        if(gjz==null) gjz="";
-        if(yema==null) yema=1;
+        if(gjz==null){
+            gjz="";
+        }
+        if(yema==null){
+            yema=1;
+        }
         int count = 10;
         int ymax=spservice.yemaMax(gjz,count);
         List<SPB> sps = spservice.finall(gjz, yema, count);
@@ -198,18 +208,26 @@ public class ErShouJYController {
     @RequestMapping("authc/jrgwc/{spid}")
     public String jrgwc(@PathVariable("spid") int spid,HttpServletRequest request){
         GWCB gwcb = new GWCB();
-        if((Integer) request.getSession().getAttribute("userid")==null) return "请先登入";
+        if((Integer) request.getSession().getAttribute("userid")==null){
+            return "请先登入";
+        }
         gwcb.setSpid(spid);
         gwcb.setUid((Integer) request.getSession().getAttribute("userid"));
         int i=gwcservice.Addgwc(gwcb);
-        if(i==0) return "商品已添加";
-        if(i==1) return "添加成功";
+        if(i==0){
+            return "商品已添加";
+        }
+        if(i==1){
+            return "添加成功";
+        }
         return "未知原因添加失败";
     }
 
     @RequestMapping("authc/gwc")
     public ModelAndView gwc(HttpServletRequest request,Integer yema){
-        if(yema==null) yema=1;
+        if(yema==null){
+            yema=1;
+        }
         int count=10;
         int uid=(Integer) request.getSession().getAttribute("userid");
         List<GWCB> gwcs = gwcservice.finall(uid,yema,count);
@@ -225,7 +243,9 @@ public class ErShouJYController {
     @RequestMapping("authc/gwcsc")
     public String gwcsc(Integer spids[], HttpServletRequest request){
         Integer uid=(Integer) request.getSession().getAttribute("userid");
-        if(uid==null) return "请先登入";
+        if(uid==null){
+            return "请先登入";
+        }
         Arrays.stream(spids).forEach(integer -> {gwcservice.DelGwc(uid,integer);});
         return "";
     }
@@ -274,8 +294,12 @@ public class ErShouJYController {
         shdzb.setUid(uid);
         int i=shdzService.Addshdz(shdzb);
         String str="";
-        if(i==1) str="添加成功";
-        else str="添加失败";
+        if(i==1){
+            str="添加成功";
+        }
+        else{
+            str="添加失败";
+        }
         return str;
     }
 
@@ -284,8 +308,12 @@ public class ErShouJYController {
         Integer uid=(Integer) request.getSession().getAttribute("userid");
         int i=shdzService.delshdz(shdzid,uid);
         String str="";
-        if(i==1) str="删除成功";
-        else str="删除失败";
+        if(i==1) {
+            str="删除成功";
+        }
+        else{
+            str="删除失败";
+        }
         return str;
     }
 
@@ -299,8 +327,12 @@ public class ErShouJYController {
         shdzb.setUid(uid);
         int i=shdzService.updeteshdz(shdzb);
         String str="";
-        if(i==1) str="修改成功";
-        else str="修改失败";
+        if(i==1){
+            str="修改成功";
+        }
+        else{
+            str="修改失败";
+        }
         return str;
     }
 
@@ -315,7 +347,9 @@ public class ErShouJYController {
     @RequestMapping("authc/fspdd")
     public ModelAndView fspdd(HttpServletRequest request,Integer yema){
         ModelAndView mv = new ModelAndView();
-        if(yema==null) yema=1;
+        if(yema==null){
+            yema=1;
+        }
         Integer uid=(Integer) request.getSession().getAttribute("userid");
         int count = 10;
         mv.setViewName("fddgl");
@@ -337,7 +371,9 @@ public class ErShouJYController {
     @RequestMapping("authc/sspdd")
     public ModelAndView sspdd(HttpServletRequest request,Integer yema){
         ModelAndView mv = new ModelAndView();
-        if(yema==null) yema=1;
+        if(yema==null){
+            yema=1;
+        }
         Integer uid=(Integer) request.getSession().getAttribute("userid");
         int count = 10;
         mv.setViewName("sddgl");

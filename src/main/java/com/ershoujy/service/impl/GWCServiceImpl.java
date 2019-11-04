@@ -17,7 +17,9 @@ public class GWCServiceImpl implements IGWCService {
     private Datatime uiit;
     @Override
     public int Addgwc(GWCB gwc) {
-        if(gwcdao.finbyid(gwc.getUid(),gwc.getSpid())!=null) return 0;
+        if(gwcdao.finbyid(gwc.getUid(),gwc.getSpid())!=null){
+            return 0;
+        }
         gwc.setAddtime(uiit.getDate(new Date()));
         return gwcdao.addgwc(gwc);
     }
@@ -36,7 +38,9 @@ public class GWCServiceImpl implements IGWCService {
     public int yemaMax(int uid,int count) {
         int coun = gwcdao.count(uid);
         int yema = coun/count+1;
-        if(coun%count==0) yema--;
+        if(coun%count==0){
+            yema--;
+        }
         return yema;
     }
 }

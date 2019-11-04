@@ -63,7 +63,9 @@ public class DDServiceImpl implements IDDService {
     public int yemaMaxF(int uid,int count) {
         int coun = dddao.fcount(uid);
         int yema=coun/count+1;
-        if(coun%count==0) yema--;
+        if(coun%count==0){
+            yema--;
+        }
         return yema;
     }
 
@@ -71,7 +73,9 @@ public class DDServiceImpl implements IDDService {
     public int yemaMaxH(int uid,int count) {
         int coun = dddao.scount(uid);
         int yema=coun/count+1;
-        if(coun%count==0) yema--;
+        if(coun%count==0){
+            yema--;
+        }
         return yema;
     }
 
@@ -79,7 +83,9 @@ public class DDServiceImpl implements IDDService {
     public int yemaMax(int count) {
         int coun = dddao.countall();
         int yema=coun/count+1;
-        if(coun%count==0) yema--;
+        if(coun%count==0){
+            yema--;
+        }
         return yema;
     }
 

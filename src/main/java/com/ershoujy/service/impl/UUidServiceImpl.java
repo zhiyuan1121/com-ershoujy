@@ -28,7 +28,9 @@ public class UUidServiceImpl implements IUUidService {
     @Override
     public boolean yanzhen(int uid, String uuid) {
         String uiid=getuuid(uid);
-        if(uiid.equals(uuid)) return true;
+        if(uiid.equals(uuid)){
+            return true;
+        }
         return false;
     }
 }

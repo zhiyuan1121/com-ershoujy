@@ -20,7 +20,7 @@ public class UserServiceImpl implements IUserService {
         user.setQuanxian("用户");
         return userdao.inset(user);
     }
-
+    @Override
     public UserB login(int userid){
         UserB user = userdao.login(userid);
         return user;
