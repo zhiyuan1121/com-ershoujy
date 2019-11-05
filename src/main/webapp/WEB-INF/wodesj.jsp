@@ -73,44 +73,6 @@
     <title>我上架的物品</title>
 </head>
 <body>
-<%--<a href="/ershoujy/ym/authc/zhuye">返回主页</a><br>--%>
-<%--    <table>--%>
-<%--        <tr>--%>
-<%--            <th height="50" width="50"></th>--%>
-<%--            <th height="50" width="200">名称</th>--%>
-<%--            <th height="50" width="100">价格</th>--%>
-<%--            <th height="50" width="100">上架时间</th>--%>
-<%--            <th height="50" width="60">状态</th>--%>
-<%--            <th height="50" width="60"></th>--%>
-<%--        </tr>--%>
-<%--        <c:forEach var="sp" items="${spbs}">--%>
-<%--            <tr>--%>
-<%--                <td><img src="/ershoujy/img/${sp.spjpg}" height="50" width="50"></td>--%>
-<%--                <td height="50" width="200"><a href="/ershoujy/anon/spxq/${sp.spid}" target="_blank">${sp.spname}</a></td>--%>
-<%--                <td height="50" width="100">${sp.spjg}</td>--%>
-<%--                <td height="50" width="100">${sp.scsj}</td>--%>
-<%--                <td height="50" width="60"><span id="zt${sp.spid}">${sp.spzt}</span></td>--%>
-<%--                <td height="50" width="60">--%>
-<%--                    <c:choose>--%>
-<%--                        <c:when test='${sp.spzt=="上架"}'>&lt;%&ndash;<a href="/ershoujy/spxj/${sp.spid}">下架</a>&ndash;%&gt;<input type="button" value="下架" onclick="xj(this)" id="${sp.spid}"></c:when>--%>
-<%--                        <c:when test='${sp.spzt=="下架"}'>&lt;%&ndash;<a href="/ershoujy/spsj/${sp.spid}">上架</a>&ndash;%&gt;<input type="button" value="上架" onclick="sj(this)" id="${sp.spid}"></c:when>--%>
-<%--&lt;%&ndash;                        <c:when test='${requestScope["m"]eq "sex"}'>sex</c:when>&ndash;%&gt;--%>
-<%--                        <c:otherwise><a href="/ershoujy/authc/fspdd">查看订单</a></c:otherwise>--%>
-<%--                    </c:choose>--%>
-<%--                </td>--%>
-<%--            </tr>--%>
-<%--        </c:forEach>--%>
-<%--    </table>--%>
-<%--    <c:forEach begin="1" end="${ymax}" varStatus="i">--%>
-<%--        <c:choose>--%>
-<%--            <c:when test='${i.index==1}'><a href="/ershoujy/authc/wdwp?yema=1">首页</a></c:when>--%>
-<%--            <c:when test='${i.index<yema-5}'></c:when>--%>
-<%--            <c:when test='${i.index==yema}'>${yema}</c:when>--%>
-<%--            <c:when test='${i.index>yema+5}'></c:when>--%>
-<%--            <c:when test='${i.index==ymax}'><a href="/ershou/authc/wdwp?yema=${ymax}">尾页</a></c:when>--%>
-<%--            <c:otherwise><a href="/ershou/authc/wdwp?yema=${i.index}">${i.index}</a></c:otherwise>--%>
-<%--        </c:choose>--%>
-<%--    </c:forEach>--%>
 <div class="page">
     <!-- Main Navbar-->
     <header class="header">

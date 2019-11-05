@@ -58,29 +58,7 @@
         });
     }
 </script>
-<%--    <table>--%>
-<%--        <tr>--%>
-<%--            <td><img src="/ershoujy/img/${sp.spjpg}" height="300" width="300"></td>--%>
-<%--        </tr>--%>
-<%--        <tr>--%>
-<%--            <td height="50" width="200">${sp.spname}</td>--%>
-<%--        </tr>--%>
-<%--        <tr>--%>
-<%--            <td height="50" width="100">价格:${sp.spjg}￥</td>--%>
-<%--        </tr><tr>--%>
-<%--            <td height="50" width="100">发布用户:${sp.fbuidd.uname}</td>--%>
-<%--        </tr><tr>--%>
-<%--            <td height="50" width="100">发布时间:${sp.scsj}</td>--%>
-<%--        </tr><tr>--%>
-<%--            <td height="50" width="60">详情:${sp.spxq}</td>--%>
-<%--        </tr><tr>--%>
-<%--            <td height="50" width="60">状态:${sp.spzt}</td>--%>
-<%--        </tr>--%>
-<%--    </table>--%>
-<%--    <input type="button" value="加入购物车" onclick="jrgwc(this)" id="${sp.spid}"><br>--%>
-<%--    <c:if test="${sp.spzt=='上架'}">--%>
-<%--        <a href="/ershoujy/authc/gmsp/${sp.spid}">购买</a>--%>
-<%--    </c:if>--%>
+
 <div class="page">
     <!-- Main Navbar-->
     <header class="header">

@@ -33,16 +33,7 @@
     <title>商品上传</title>
 </head>
 <body>
-<%--${cwts}--%>
-<%--    <form action="/ershoujy/authc/spadd" method="post" enctype="multipart/form-data" name="fileForm">--%>
-<%--        商品标题:<input type="text" name="spname" id="bt"><span id="btts"></span></p><br>--%>
-<%--        商品价格:<input type="text" name="spjg" id="jg"><span id="jgts"></span></p><br>--%>
-<%--        商品图片:<input type="file" name="img" id="wj" accept="image/*"><span id="wjts"></span></p><br>--%>
-<%--        商品详情:<textarea name="spxq" id="xq" style="width:200px; height:70px;"></textarea><span id="xqts"></span></p><br>--%>
-<%--        <input type="button" value="上传" onclick="pw()" id="submitBtn">--%>
-<%--    </form>--%>
-<%--    <a href="/ershoujy/ym/authc/zhuye">返回主页</a>--%>
-<%--</body>--%>
+
 <div class="page">
     <!-- Main Navbar-->
     <header class="header">

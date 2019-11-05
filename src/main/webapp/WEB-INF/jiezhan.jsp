@@ -63,29 +63,7 @@
         });
     }
 </script>
-<%--    <table>--%>
-<%--        <tr>--%>
-<%--            <th height="50" width="50"></th>--%>
-<%--            <th height="50" width="200">名称</th>--%>
-<%--            <th height="50" width="100">价格</th>--%>
-<%--        </tr>--%>
-<%--        <c:forEach var="sp" items="${sps}">--%>
-<%--            <tr>--%>
-<%--                <td><input type="hidden" value="${sp.spid}" name="spids"></td>--%>
-<%--                <td><img src="/ershoujy/img/${sp.spjpg}" height="50" width="50"></td>--%>
-<%--                <td height="50" width="200">${sp.spname}</td>--%>
-<%--                <td height="50" width="100">${sp.spjg}</td>--%>
-<%--            </tr>--%>
-<%--        </c:forEach>--%>
-<%--    </table>--%>
-<%--    总价:${zj}<br>--%>
-<%--    选择收货地址:--%>
-<%--    <select  id="shdz">--%>
-<%--        <c:forEach var="sh" items="${shdzs}">--%>
-<%--            <option value ="${sh.shid}">${sh.shdz}${sh.phone}</option>--%>
-<%--        </c:forEach>--%>
-<%--    </select><br>--%>
-<%--    <input type="button" value="结账" onclick="jz()">--%>
+
 <div class="page">
     <!-- Main Navbar-->
     <header class="header">

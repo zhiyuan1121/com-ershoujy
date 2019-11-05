@@ -94,7 +94,6 @@
                 </ul>
             </nav>
             <div class="content-inner">
-                内容
             </div>
         </div>
     </div>

@@ -114,27 +114,7 @@
         });
     }
 </script>
-<%--    <form action="/ershoujy/authc/shdzadd" method="post" id="form1">--%>
-<%--        收货地址:<input type="text" name="shdz"><br>--%>
-<%--        联系电话:<input type="text" name="phone"><br>--%>
-<%--        <input type="button" value="添加" onclick="tianjia()">--%>
-<%--    </form>--%>
-<%--    <table>--%>
-<%--        <tr>--%>
-<%--            <th height="50" width="200">地址</th>--%>
-<%--            <th height="50" width="100">电话</th>--%>
-<%--            <th height="50" width="80"></th>--%>
-<%--            <th height="50" width="80"></th>--%>
-<%--        </tr>--%>
-<%--        <c:forEach var="shdz" items="${shdzs}">--%>
-<%--            <tr>--%>
-<%--                <td><input type="text" value="${shdz.shdz}" id="${shdz.shid}dz" height="50" width="200"></td>--%>
-<%--                <td><input type="text" value="${shdz.phone}" id="${shdz.shid}phone" height="50" width="100"></td>--%>
-<%--                <td><input type="button" value="修改" shid="${shdz.shid}" height="50" width="80" onclick="xiugai(this)"></td>--%>
-<%--                <td><input type="button" value="删除" shid="${shdz.shid}" height="50" width="80" onclick="del(this)"></td>--%>
-<%--            </tr>--%>
-<%--        </c:forEach>--%>
-<%--    </table>--%>
+
 <div class="page">
     <!-- Main Navbar-->
     <header class="header">
