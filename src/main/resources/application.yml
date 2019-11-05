@@ -12,3 +12,4 @@ spring:
   datasource:
     url: jdbc:mysql://134.175.72.97:3306/ershoujy?useUnicode=true&characterEncoding=utf8
     username: root
+    password: Ljq949521727

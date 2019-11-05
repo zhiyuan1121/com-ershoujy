@@ -43,22 +43,24 @@ public class ErShouJYController {
     @Autowired
     private IUUidService uuidservice;
     @RequestMapping("anon/login")
-    public ModelAndView login(int uid,String paw,HttpServletRequest request){
+    public ModelAndView login(Integer loginUsername,String loginPassword,HttpServletRequest request){
         ModelAndView mv = new ModelAndView();
         mv.setViewName("login");
         Subject subject = SecurityUtils.getSubject();
-        UsernamePasswordToken token = new UsernamePasswordToken(""+uid, uiit.getMd5(paw));
+        UsernamePasswordToken token = new UsernamePasswordToken(""+loginUsername, uiit.getMd5(loginPassword));
+        UserB user = userservice.login(loginUsername);
         try {
             subject.login(token);
             mv.setViewName("redirect:/ym/authc/zhuye");
             String uuid=UUID.randomUUID().toString().replaceAll("-", "").toUpperCase();
-            request.getSession().setAttribute("userid",uid);
+            request.getSession().setAttribute("userid",loginUsername);
+            request.getSession().setAttribute("uname",user.getUname());
             request.getSession().setAttribute("uuid",uuid);
 //            mv.addObject("userid",uid);
 //            mv.addObject("uuid",uuid);
 //            System.out.println(uid);
 //            System.out.println(uuid);
-            uuidservice.setuuid(uid,uuid);
+            uuidservice.setuuid(loginUsername,uuid);
             //登录成功
         }catch (UnknownAccountException e){
             mv.addObject("ts","用户名不存在");
